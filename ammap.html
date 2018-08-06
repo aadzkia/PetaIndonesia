@@ -1,0 +1,1725 @@
+<html>
+<!-- Styles -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 400px;
+}
+.ammapDescriptionTitle {
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 15px;
+  font-family: sans-serif;
+}
+h1 {
+  font-family: sans-serif;
+}
+h3 {
+  font-family: sans-serif;
+}
+h5 {
+  font-family: sans-serif;
+}
+</style>
+
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+<!-- <script src="https://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>  -->
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<!-- <script src="https://www.amcharts.com/lib/3/themes/dark.js"></script> -->
+<!-- <script src="ammap.js"></script> -->
+<script src="IndonesiaLow.js"></script>
+<!-- <script src="light.js"></script> -->
+<!-- Chart code -->
+<script>
+/**
+ * Define SVG path for target icon
+ */
+var targetSVG = "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z M9,15.93 c-3.83,0-6.93-3.1-6.93-6.93S5.17,2.07,9,2.07s6.93,3.1,6.93,6.93S12.83,15.93,9,15.93 M12.5,9c0,1.933-1.567,3.5-3.5,3.5S5.5,10.933,5.5,9S7.067,5.5,9,5.5 S12.5,7.067,12.5,9z";
+
+/**
+ * Create the map
+ */
+var map = AmCharts.makeChart( "chartdiv", {
+  "type": "map",
+  "hideCredits":true,
+  "projection": "mercator",
+  "theme": "light",
+  "imagesSettings": {
+    "rollOverScale": 3,
+    "selectedScale": 3,
+    // "selectedColor": "#15A892",
+    // "color": "#ff6600"
+  },
+
+  "areasSettings": {
+    "unlistedAreasColor": "#83C1C6",
+    "outlineThickness": 0.3
+  },
+
+  "dataProvider": {
+    "map": "IndonesiaLow",
+            "images": [
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Tombak Haminjon <br><b>Desa </b> Pandumaan, Sipituhuta, <b>Kec. </b> Pollung, <b>Kab. </b> Humbang Hasundutan, <b>Prov. </b> Sumatra Utara <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 5172 <br><b>Tahun penetapan/proses: </b> 2017",
+            "latitude": 2.320195,
+            "longitude": 98.643559
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Suku Anak Dalam <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Tidak tersedia, <b>Kab. </b> Sarolangun dan Batanghari, <b>Prov. </b> Jambi <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 5455 <br><b>Tahun penetapan/proses: </b> 2017",
+            "latitude": -2.618689,
+            "longitude": 102.140404
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Bukit Sembahyang and Bukit Padun Gelanggang <br><b>Desa </b> Air Terjun, <b>Kec. </b> Siulak, <b>Kab. </b> Kerinci, <b>Prov. </b> Jambi <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 39 <br><b>Tahun penetapan/proses: </b> 2016",
+            "latitude": 0.114113,
+            "longitude": 102.191864
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Bukit Tinggai <br><b>Desa </b> Sungai Deras, <b>Kec. </b> Air Hangat Timur, <b>Kab. </b> Kerinci, <b>Prov. </b> Jambi <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 41 <br><b>Tahun penetapan/proses: </b> 2016",
+            "latitude": -2.001304,
+            "longitude": 101.29876
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Tigo Luhah Permenti <br><b>Desa </b> Pungut Mudik, <b>Kec. </b> Air Hangat Timur, <b>Kab. </b> Kerinci, <b>Prov. </b> Jambi <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 276 <br><b>Tahun penetapan/proses: </b> 2016",
+            "latitude": -1.986463,
+            "longitude": 101.449936
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Tigo Luhah Kemantan <br><b>Desa </b> Kemantan Kabalai, Kemantan Tinggi, Kemantan Mudik, Kemantan Raya, Kemantan Agung, <b>Kec. </b> Air Hangat Timur, <b>Kab. </b> Kerinci, <b>Prov. </b> Jambi <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 452 <br><b>Tahun penetapan/proses: </b> 2016",
+            "latitude": -1.99821,
+            "longitude": 101.391236
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Marga Sarampas <br><b>Desa </b> Rantau Kermas, <b>Kec. </b> Jangkat, <b>Kab. </b> Merangin, <b>Prov. </b> Jambi <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 130 <br><b>Tahun penetapan/proses: </b> 2016",
+            "latitude": -2.596578,
+            "longitude": 101.776643
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Ammatoa Kajang <br><b>Desa </b> Tana Toa, Pattiroang, Bonto Baji dan Malleleng, <b>Kec. </b> Kajang, <b>Kab. </b> Bulukumba, <b>Prov. </b> Sulawesi Selatan <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 313.99 <br><b>Tahun penetapan/proses: </b> 2016",
+            "latitude": -5.322818,
+            "longitude": 120.286688
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Wana Posangke <br><b>Desa </b> Taronggo, <b>Kec. </b> Bungku Utara, <b>Kab. </b> Morowali Utara, <b>Prov. </b> Sulawesi Tengah <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 6212 <br><b>Tahun penetapan/proses: </b> 2016",
+            "latitude": -1.571144,
+            "longitude": 121.487646
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kasepuhan Karang <br><b>Desa </b> Jagaraksa, <b>Kec. </b> Muncang, <b>Kab. </b> Lebak, <b>Prov. </b> Banten <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 486 <br><b>Tahun penetapan/proses: </b> 2016",
+            "latitude": -6.60585,
+            "longitude": 106.312461
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Tawang Panyai <br><b>Desa </b> Tapang Semadak, <b>Kec. </b> Sekadau Hilir, <b>Kab. </b> Sekadau, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 40.5 <br><b>Tahun penetapan/proses: </b> 2017",
+            "latitude": -0.010556,
+            "longitude": 111.108889
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Marena <br><b>Desa </b> Marena, <b>Kec. </b> Kulawi, <b>Kab. </b> Sigi, <b>Prov. </b> Sulawesi Tengah <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 756 <br><b>Tahun penetapan/proses: </b> 2017",
+            "latitude": -1.560958,
+            "longitude": 120.022656
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Hemaq Beniung <br><b>Desa </b> Juaq Asa, <b>Kec. </b> Borong Tiongkok, <b>Kab. </b> Kutai Barat, <b>Prov. </b> Kalimantan Timur <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 48.85 <br><b>Tahun penetapan/proses: </b> 2017",
+            "latitude": -0.185057,
+            "longitude": 115.685166
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Bukit Bujang <br><b>Desa </b> Senamat Ulu, <b>Kec. </b> Batin III Ulu, <b>Kab. </b> Bungo, <b>Prov. </b> Jambi <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 223 <br><b>Tahun penetapan/proses: </b> 2017",
+            "latitude": -1.743613,
+            "longitude": 101.920914
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Belukar Panjang <br><b>Desa </b> Batu Kerbau, <b>Kec. </b> Pelepat, <b>Kab. </b> Bungo, <b>Prov. </b> Jambi <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 326 <br><b>Tahun penetapan/proses: </b> 2017",
+            "latitude": -1.812901,
+            "longitude": 101.735361
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Batu Kerbau <br><b>Desa </b> Batu Kerbau, <b>Kec. </b> Pelepat, <b>Kab. </b> Bungo, <b>Prov. </b> Jambi <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 323 <br><b>Tahun penetapan/proses: </b> 2017",
+            "latitude": -2.055412,
+            "longitude": 102.29757
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Rimbo Penghulu Depati Gento Rajo <br><b>Desa </b> Pulau Tengah, <b>Kec. </b> Jangkat, <b>Kab. </b> Merangin, <b>Prov. </b> Jambi <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 525 <br><b>Tahun penetapan/proses: </b> 2017",
+            "latitude": -2.575448,
+            "longitude": 101.822818
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Bukit Pintu Koto <br><b>Desa </b> Ngaol, <b>Kec. </b> Tabir Barat, <b>Kab. </b> Merangin, <b>Prov. </b> Jambi <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 278 <br><b>Tahun penetapan/proses: </b> 2017",
+            "latitude": -1.967494,
+            "longitude": 101.857062
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Baru Pelepat <br><b>Desa </b> Baru Pelepat Hamlet, <b>Kec. </b> Pelepat, <b>Kab. </b> Bungo, <b>Prov. </b> Jambi <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 821 <br><b>Tahun penetapan/proses: </b> 2017",
+            "latitude": -1.813966,
+            "longitude": 102.075187
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Rimbo Bulim <br><b>Desa </b> Rambah, <b>Kec. </b> Tanah Tumbuh, <b>Kab. </b> Bungo, <b>Prov. </b> Jambi <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 40 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.449515,
+            "longitude": 101.894171
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Imbo Larangan Pematang Kulim dan Imbo Larangan Inum Sakti <br><b>Desa </b> Temenggung, <b>Kec. </b> Limun, <b>Kab. </b> Sarolangun, <b>Prov. </b> Jambi <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 115 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.475317,
+            "longitude": 102.600627
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Pikul <br><b>Desa </b> Sahan, <b>Kec. </b> Seluas, <b>Kab. </b> Bengkayang, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 100 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.132281,
+            "longitude": 109.730085
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#003366",
+            "title": "<b>Masyarakat Hutan Adat: </b> Leuweng Gede <br><b>Desa </b> Kuta Hamlet, Karangpaningal, <b>Kec. </b> Tambaksari, <b>Kab. </b> Ciamis, <b>Prov. </b> Jawa Barat <br><b>Status: </b> Penetapan <br><b>Luas areal (ha):</b> 31 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -7.239943,
+            "longitude": 108.553255
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#0099cc",
+            "title": "<b>Masyarakat Hutan Adat: </b> Nenek Limo <br><b>Desa </b> Hiang, Betung Kuning, Muara Air, <b>Kec. </b> Sitinjau Laut, <b>Kab. </b> Kerinci, <b>Prov. </b> Jambi <br><b>Status: </b> Proses verifikasi oleh KLHK <br><b>Luas areal (ha):</b> 645 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.05564,
+            "longitude": 101.477416
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#0099cc",
+            "title": "<b>Masyarakat Hutan Adat: </b> Ulu Air <br><b>Desa </b> Lempur Mudik, Lempur Hilir, <b>Kec. </b> Gunung Raya, <b>Kab. </b> Kerinci, <b>Prov. </b> Jambi <br><b>Status: </b> Proses verifikasi oleh KLHK <br><b>Luas areal (ha):</b> 745 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.348692,
+            "longitude": 101.504457
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#0099cc",
+            "title": "<b>Masyarakat Hutan Adat: </b> Marena <br><b>Desa </b> Pekalobean & Singki, <b>Kec. </b> Angeraja, <b>Kab. </b> Enrekang, <b>Prov. </b> Sulawesi Selatan <br><b>Status: </b> Proses verifikasi oleh KLHK <br><b>Luas areal (ha):</b> 150 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.371176,
+            "longitude": 119.781526
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#0099cc",
+            "title": "<b>Masyarakat Hutan Adat: </b> Orong <br><b>Desa </b> Buntu Bantaun & Rante Mario, <b>Kec. </b> Malua, <b>Kab. </b> Enrekang, <b>Prov. </b> Sulawesi Selatan <br><b>Status: </b> Proses verifikasi oleh KLHK <br><b>Luas areal (ha):</b> 40 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.37,
+            "longitude": 119.8894
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#0099cc",
+            "title": "<b>Masyarakat Hutan Adat: </b> Baringin <br><b>Desa </b> Baringin, <b>Kec. </b> Maiwa, <b>Kab. </b> Enrekang, <b>Prov. </b> Sulawesi Selatan <br><b>Status: </b> Proses verifikasi oleh KLHK <br><b>Luas areal (ha):</b> 594 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.665001,
+            "longitude": 119.940323
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Mukim Lampanah <br><b>Desa </b> Lampanah, <b>Kec. </b> Seulimeum, <b>Kab. </b> Aceh Besar, <b>Prov. </b> Aceh <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 5.533927,
+            "longitude": 95.670222
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Mukim Gunung Biram <br><b>Desa </b> Lon Baroh, <b>Kec. </b> Lembah Seulawah, <b>Kab. </b> Aceh Besar, <b>Prov. </b> Aceh <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 5.443203,
+            "longitude": 95.682661
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Mukim Blang Mee <br><b>Desa </b> Teungoh Blang Mee, <b>Kec. </b> Lhoong, <b>Kab. </b> Aceh Besar, <b>Prov. </b> Aceh <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 5.259741,
+            "longitude": 95.293713
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Mukim Leupung <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Leupung, <b>Kab. </b> Aceh Besar, <b>Prov. </b> Aceh <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 5.309367,
+            "longitude": 95.36427
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Mukim Krueng Sabe <br><b>Desa </b> Mon Mata, <b>Kec. </b> Krueng Sabee, <b>Kab. </b> Aceh Jaya, <b>Prov. </b> Aceh <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 4.831917,
+            "longitude": 95.829455
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Mukim Panga Pasi <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Panga, <b>Kab. </b> Aceh Jaya, <b>Prov. </b> Aceh <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 4.659747,
+            "longitude": 95.776593
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Mukim Lango <br><b>Desa </b> Lango, <b>Kec. </b> Pantai Ceuremen, <b>Kab. </b> Aceh Barat, <b>Prov. </b> Aceh <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 4.443079,
+            "longitude": 96.275041
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Mukim Manjeng <br><b>Desa </b> Manjeng, <b>Kec. </b> Pantai Ceuremen, <b>Kab. </b> Aceh Barat, <b>Prov. </b> Aceh <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 4.399984,
+            "longitude": 96.294226
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Mukim Meuko <br><b>Desa </b> Payo Baro Meuko, <b>Kec. </b> Panton Reu, <b>Kab. </b> Aceh Barat, <b>Prov. </b> Aceh <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 4.424576,
+            "longitude": 96.222271
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Mukim Tungkop <br><b>Desa </b> Tungkop, <b>Kec. </b> Sungai Mas, <b>Kab. </b> Aceh Barat, <b>Prov. </b> Aceh <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 4.614469,
+            "longitude": 96.112304
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ffcc00",
+            "title": "<b>Masyarakat Hutan Adat: </b> Mukim Beungga <br><b>Desa </b> Beungga, <b>Kec. </b> Tangse, <b>Kab. </b> Pidie, <b>Prov. </b> Aceh <br><b>Status: </b> Sudah mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 5.139124,
+            "longitude": 95.917314
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ffcc00",
+            "title": "<b>Masyarakat Hutan Adat: </b> Mukim Kunyet <br><b>Desa </b> (14 Gampong), <b>Kec. </b> Padang Tiji, <b>Kab. </b> Pidie, <b>Prov. </b> Aceh <br><b>Status: </b> Sudah mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 5.284401,
+            "longitude": 95.816904
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ffcc00",
+            "title": "<b>Masyarakat Hutan Adat: </b> Mukim Paloh <br><b>Desa </b> Paloh, <b>Kec. </b> Padang Tiji, <b>Kab. </b> Pidie, <b>Prov. </b> Aceh <br><b>Status: </b> Sudah mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 5.321934,
+            "longitude": 95.782757
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> UMA Goiso‚ÄôOinan <br><b>Desa </b> Goiso‚ÄôOinan, <b>Kec. </b> Sipora Utara, <b>Kab. </b> Mentawai, <b>Prov. </b> Sumatra Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.083967,
+            "longitude": 99.679304
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> UMA Rokot <br><b>Desa </b> Rokot, <b>Kec. </b> Tuapejat, <b>Kab. </b> Mentawai, <b>Prov. </b> Sumatra Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.015731,
+            "longitude": 99.567111
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> UMA Saureinu <br><b>Desa </b> Saureinu, <b>Kec. </b> Sipora, <b>Kab. </b> Mentawai, <b>Prov. </b> Sumatra Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.161926,
+            "longitude": 99.696567
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> UMA Usut Ngaik Matobe <br><b>Desa </b> Matobe, <b>Kec. </b> Sikakap, <b>Kab. </b> Mentawai, <b>Prov. </b> Sumatra Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.107123,
+            "longitude": 99.703001
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> UMA Suku Samongilailai <br><b>Desa </b> Malancan, <b>Kec. </b> Siberut Utara, <b>Kab. </b> Mentawai, <b>Prov. </b> Sumatra Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.074222,
+            "longitude": 98.923243
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> UMA Suku Saerejen <br><b>Desa </b> Saerejen, <b>Kec. </b> Siberut Utara, <b>Kab. </b> Mentawai, <b>Prov. </b> Sumatra Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.069391,
+            "longitude": 98.923226
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> UMA Suku Satanduk <br><b>Desa </b> Satanduk, <b>Kec. </b> Siberut Utara, <b>Kab. </b> Mentawai, <b>Prov. </b> Sumatra Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.08,
+            "longitude": 98.923226
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> UMA Suku Saponduruk <br><b>Desa </b> Saponduruk, <b>Kec. </b> Siberut Utara, <b>Kab. </b> Mentawai, <b>Prov. </b> Sumatra Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.1,
+            "longitude": 98.923226
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Nagari Alahan Mati <br><b>Desa </b> Alahan Mati, <b>Kec. </b> Simpang Alahan Mati, <b>Kab. </b> Pasaman, <b>Prov. </b> Sumatra Barat <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.048165,
+            "longitude": 100.158555
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Nagari Simpang <br><b>Desa </b> Simpang, <b>Kec. </b> Simpang Alahan Mati, <b>Kab. </b> Pasaman, <b>Prov. </b> Sumatra Barat <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.011258,
+            "longitude": 100.182073
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Nagari Ganggo Mudiak <br><b>Desa </b> Ganggo Mudiak, <b>Kec. </b> Bonjol, <b>Kab. </b> Pasaman, <b>Prov. </b> Sumatra Barat <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.010807,
+            "longitude": 100.298538
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ffcc00",
+            "title": "<b>Masyarakat Hutan Adat: </b> Nagari Malalo Tigo Jurai <br><b>Desa </b> Guguah Malalo, <b>Kec. </b> Batipuh Selatan, <b>Kab. </b> Tanah Datar, <b>Prov. </b> Sumatra Barat <br><b>Status: </b> Sudah mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.643294,
+            "longitude": 100.475252
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Muaro Aie <br><b>Desa </b> Muaro Aie, <b>Kec. </b> IV Nagari Bayang Selatan, <b>Kab. </b> Pesisir Selatan, <b>Prov. </b> Sumatra Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.117765,
+            "longitude": 100.646847
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Koto Ranah <br><b>Desa </b> Koto Ranah, <b>Kec. </b> IV Nagari Bayang Selatan, <b>Kab. </b> Pesisir Selatan, <b>Prov. </b> Sumatra Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.100175,
+            "longitude": 100.60918
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Tapan,  Lunang <br><b>Desa </b> Tapan dan Lunang, <b>Kec. </b> Basa Ampek Balai Tapan, <b>Kab. </b> Pesisir Selatan, <b>Prov. </b> Sumatra Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.087473,
+            "longitude": 101.203074
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kota Besar <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Koto Besar, <b>Kab. </b> Dharmasraya, <b>Prov. </b> Sumatra Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.252291,
+            "longitude": 101.636563
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ffcc00",
+            "title": "<b>Masyarakat Hutan Adat: </b> Desa Pangkalan Jambu <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Pangkalan Jambu, <b>Kab. </b> Merangin, <b>Prov. </b> Jambi <br><b>Status: </b> Sudah mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.182107,
+            "longitude": 101.938843
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ffcc00",
+            "title": "<b>Masyarakat Hutan Adat: </b> Bukit Tapanggang <br><b>Desa </b> Guguk, <b>Kec. </b> Renah Pembarap, <b>Kab. </b> Merangin, <b>Prov. </b> Jambi <br><b>Status: </b> Sudah mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.192885,
+            "longitude": 102.099247
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ffcc00",
+            "title": "<b>Masyarakat Hutan Adat: </b> Imbo Pasako dan Imbo Parabokolo <br><b>Desa </b> Batang Kibul, <b>Kec. </b> Tabir Barat, <b>Kab. </b> Merangin, <b>Prov. </b> Jambi <br><b>Status: </b> Sudah mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.870769,
+            "longitude": 101.918222
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ffcc00",
+            "title": "<b>Masyarakat Hutan Adat: </b> Desa Tiaro <br><b>Desa </b> Tiaro, <b>Kec. </b> Muara Siau, <b>Kab. </b> Merangin, <b>Prov. </b> Jambi <br><b>Status: </b> Sudah mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.295363,
+            "longitude": 102.042653
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Renai Alai <br><b>Desa </b> Renah Alai, <b>Kec. </b> Jangkat, <b>Kab. </b> Merangin, <b>Prov. </b> Jambi <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.506311,
+            "longitude": 101.833188
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Tanjung Kasri <br><b>Desa </b> Tanjung Kasri, <b>Kec. </b> Jangkat, <b>Kab. </b> Merangin, <b>Prov. </b> Jambi <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.382696,
+            "longitude": 101.680584
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Renah Kemumu <br><b>Desa </b> Renah Kemumu, <b>Kec. </b> Jangkat, <b>Kab. </b> Merangin, <b>Prov. </b> Jambi <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.416018,
+            "longitude": 101.574769
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Lubuk Mentilin <br><b>Desa </b> Lubuk Mentilin, <b>Kec. </b> Jangkat, <b>Kab. </b> Merangin, <b>Prov. </b> Jambi <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.488484,
+            "longitude": 101.769429
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Bukit Bulan \"Batin jo Penghulu\" <br><b>Desa </b> Lubuk Bedorong, Desa Temalang, Desa Meribung, Desa Napal Melintang, Desa Mersip, Desa Berkun, <b>Kec. </b> Limun, <b>Kab. </b> Sarolangun, <b>Prov. </b> Jambi <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.609437,
+            "longitude": 102.583785
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Tujuh Bukit Uluk Ngoh <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> (Kawasan Taman Nasional Seblat), <b>Kab. </b> Kerinci, <b>Prov. </b> Jambi <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 902.61 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.71882,
+            "longitude": 101.3793
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Muaro Langkap Tamiai <br><b>Desa </b> Tamiai, <b>Kec. </b> Batang Merangin, <b>Kab. </b> Kerinci, <b>Prov. </b> Jambi <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 3302.08 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.098368,
+            "longitude": 101.727425
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Biang Sari <br><b>Desa </b> Pengasi Baru, <b>Kec. </b> Batang Merangin, <b>Kab. </b> Kerinci, <b>Prov. </b> Jambi <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 180.63 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.086495,
+            "longitude": 101.68409
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Parabokalo <br><b>Desa </b> Talang Tinggi dan Desa Mukai Tinggi, <b>Kec. </b> Siulak, <b>Kab. </b> Kerinci, <b>Prov. </b> Jambi <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 599.61 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.896379,
+            "longitude": 101.386225
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Buhung Batu <br><b>Desa </b> Mukai Pintu, <b>Kec. </b> Siulak, <b>Kab. </b> Kerinci, <b>Prov. </b> Jambi <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 280.02 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.909227,
+            "longitude": 101.411191
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Bukit Tinting <br><b>Desa </b> Pungut Ilir, <b>Kec. </b> Air Hangat Timur, <b>Kab. </b> Kerinci, <b>Prov. </b> Jambi <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 71.08 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.975306,
+            "longitude": 101.558044
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Bukit Gedang <br><b>Desa </b> Pendung Ilir, <b>Kec. </b> Air Hangat, <b>Kab. </b> Kerinci, <b>Prov. </b> Jambi <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 103 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.984215,
+            "longitude": 101.375203
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Bukit Sigi <br><b>Desa </b> Tanjung Genting, <b>Kec. </b> Gunung Kerinci, <b>Kab. </b> Kerinci, <b>Prov. </b> Jambi <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 33.31 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.960807,
+            "longitude": 101.23063
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Imbo Putui <br><b>Desa </b> Patepahan, <b>Kec. </b> Tapung, <b>Kab. </b> Kampar, <b>Prov. </b> Riau <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.591226,
+            "longitude": 100.899225
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kenegerian Umbio <br><b>Desa </b> Padang Mutung, <b>Kec. </b> Kampar, <b>Kab. </b> Kampar, <b>Prov. </b> Riau <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.322901,
+            "longitude": 101.152164
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Koto Tibun ‚ÄúGhimbo Potai‚Äù <br><b>Desa </b> Koto Tibun, <b>Kec. </b> Kampar, <b>Kab. </b> Kampar, <b>Prov. </b> Riau <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.313632,
+            "longitude": 101.155921
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Persekutuan Putopang di Kenegerian Rumbio (Halaman Kuyang, Tanjung Kulim, Pulau Sorak \"Cubodak Mangkaghak\") <br><b>Desa </b> Rumbio, <b>Kec. </b> Kampar, <b>Kab. </b> Kampar, <b>Prov. </b> Riau <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.32509,
+            "longitude": 101.143651
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kenegerian Kampar <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Kampar, <b>Kab. </b> Kampar, <b>Prov. </b> Riau <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.32437,
+            "longitude": 101.078669
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kenegerian Bangkinang <br><b>Desa </b> Pulau, <b>Kec. </b> Bangkinang, <b>Kab. </b> Kampar, <b>Prov. </b> Riau <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.314193,
+            "longitude": 101.047478
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kenegerian Gajah Bertalut <br><b>Desa </b> Gajah Bertalut, <b>Kec. </b> Kampar Kiri Hulu, <b>Kab. </b> Kampar, <b>Prov. </b> Riau <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.303411,
+            "longitude": 101.122266
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kutai Embong Uram‚ Marga Suku IX <br><b>Desa </b> Embong , <b>Kec. </b> Uram Jaya, <b>Kab. </b> Lebong, <b>Prov. </b> Bengkulu <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 1072 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.070601,
+            "longitude": 102.296573
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kutai Embong I‚ Marga Suku IX <br><b>Desa </b> Embong I, <b>Kec. </b> Uram Jaya, <b>Kab. </b> Lebong, <b>Prov. </b> Bengkulu <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 698 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.094346,
+            "longitude": 102.269069
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kutai Kota Baru‚ Marga Suku IX <br><b>Desa </b> Kota Baru, <b>Kec. </b> Uram Jaya, <b>Kab. </b> Lebong, <b>Prov. </b> Bengkulu <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 696 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.061285,
+            "longitude": 102.278584
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kutai Plabai‚ Marga Suku IX <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Pelabai, <b>Kab. </b> Lebong, <b>Prov. </b> Bengkulu <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 239 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.108176,
+            "longitude": 102.148622
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kutai Kota Baru Santan‚ Marga Suku IX <br><b>Desa </b> Kota Baru Santan, <b>Kec. </b> Pelabai, <b>Kab. </b> Lebong, <b>Prov. </b> Bengkulu <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 178.9 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.167402,
+            "longitude": 102.129747
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kutai Talang Donok‚ Marga Jurukalang <br><b>Desa </b> Talang Donok, <b>Kec. </b> Rimbo Pengadang, <b>Kab. </b> Lebong, <b>Prov. </b> Bengkulu <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 317.3 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.243137,
+            "longitude": 102.423004
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Marga Talang Donok I‚ Marga Jurukalang <br><b>Desa </b> Talang Donok I, <b>Kec. </b> Rimbo Pengadang, <b>Kab. </b> Lebong, <b>Prov. </b> Bengkulu <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 572.7 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.218689,
+            "longitude": 102.491333
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Marga Teluk Diyen, Marga Jurukalang <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Pelabai, <b>Kab. </b> Lebong, <b>Prov. </b> Bengkulu <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 260.6 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.103209,
+            "longitude": 102.147419
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Marga Tanjung Bajok <br><b>Desa </b> Bajok, <b>Kec. </b> Rimbo Pengadang, <b>Kab. </b> Lebong, <b>Prov. </b> Bengkulu <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 1210.3 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.270074,
+            "longitude": 102.481816
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Marga Talang Ratu <br><b>Desa </b> Talang Ratu, <b>Kec. </b> Rimbo Pengadang, <b>Kab. </b> Lebong, <b>Prov. </b> Bengkulu <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> 1274.4 <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.25249,
+            "longitude": 102.391242
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Marga Suka Sari <br><b>Desa </b> Suka Sari, <b>Kec. </b> Lebong Selatan, <b>Kab. </b> Lebong, <b>Prov. </b> Bengkulu <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.240877,
+            "longitude": 102.371463
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Ngata to Lindu <br><b>Desa </b> Lindu, <b>Kec. </b> Lindu, <b>Kab. </b> Sigi, <b>Prov. </b> Sulawesi Tengah <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.370724,
+            "longitude": 120.245545
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> To Kulawi Uma <br><b>Desa </b> Lawe, <b>Kec. </b> Pipikoro, <b>Kab. </b> Sigi, <b>Prov. </b> Sulawesi Tengah <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.732813,
+            "longitude": 119.852421
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> To Kulawi, Masewo <br><b>Desa </b> Masewo, <b>Kec. </b> Pipikoro, <b>Kab. </b> Sigi, <b>Prov. </b> Sulawesi Tengah <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.828674,
+            "longitude": 120.027812
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ffcc00",
+            "title": "<b>Masyarakat Hutan Adat: </b> Lipu Mpoa <br><b>Desa </b> Bulan Jaya, <b>Kec. </b> Ampana Tete, <b>Kab. </b> Tojo Una-una, <b>Prov. </b> Sulawesi Tengah <br><b>Status: </b> Sudah mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.276211,
+            "longitude": 122.046745
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ffcc00",
+            "title": "<b>Masyarakat Hutan Adat: </b> Lipu Vananga Bulang <br><b>Desa </b> Bulan Jaya, <b>Kec. </b> Ampana Tete, <b>Kab. </b> Tojo Una-una, <b>Prov. </b> Sulawesi Tengah <br><b>Status: </b> Sudah mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.267106,
+            "longitude": 121.936963
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ffcc00",
+            "title": "<b>Masyarakat Hutan Adat: </b> Marena <br><b>Desa </b> Pekalobean, <b>Kec. </b> Anggeraja, <b>Kab. </b> Enrekang, <b>Prov. </b> Sulawesi Selatan <br><b>Status: </b> Sudah mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.372913,
+            "longitude": 119.766296
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ffcc00",
+            "title": "<b>Masyarakat Hutan Adat: </b> Baringin <br><b>Desa </b> Baringin, <b>Kec. </b> Maiwa, <b>Kab. </b> Enrekang, <b>Prov. </b> Sulawesi Selatan <br><b>Status: </b> Sudah mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.666031,
+            "longitude": 119.932439
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ffcc00",
+            "title": "<b>Masyarakat Hutan Adat: </b> Orong <br><b>Desa </b> Rante Mario, <b>Kec. </b> Malua, <b>Kab. </b> Enrekang, <b>Prov. </b> Sulawesi Selatan <br><b>Status: </b> Sudah mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -3.364417,
+            "longitude": 119.899637
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> To Konde <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Malili , <b>Kab. </b> Luwu Timur, <b>Prov. </b> Sulawesi Selatan <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.739004,
+            "longitude": 121.256713
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Koronsie <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Tidak tersedia, <b>Kab. </b> Luwu Timur, <b>Prov. </b> Sulawesi Selatan <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.739004,
+            "longitude": 121.256713
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Macoa Bawalipu <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Wotu, <b>Kab. </b> Luwu Timur, <b>Prov. </b> Sulawesi Selatan <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.572551,
+            "longitude": 120.900894
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Cerekang <br><b>Desa </b> Manurung, <b>Kec. </b> Malili, <b>Kab. </b> Luwu Timur, <b>Prov. </b> Sulawesi Selatan <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.634965,
+            "longitude": 121.031469
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Padoe <br><b>Desa </b> (Seluruh desa), <b>Kec. </b> Malili, Wasuponda, Nuha dan Towuti, <b>Kab. </b> Luwu Timur, <b>Prov. </b> Sulawesi Selatan <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.824535,
+            "longitude": 121.367806
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Pamona <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Mangkutana, <b>Kab. </b> Luwu Timur, <b>Prov. </b> Sulawesi Selatan <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.27239,
+            "longitude": 120.558818
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Tabulahan <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Tabulahan, <b>Kab. </b> Mamasa, <b>Prov. </b> Sulawesi Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.812462,
+            "longitude": 119.352177
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Sindaga Manik <br><b>Desa </b> Sindagamanik, <b>Kec. </b> Tanduk Kalua, <b>Kab. </b> Mamasa, <b>Prov. </b> Sulawesi Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.999011,
+            "longitude": 119.279327
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ffcc00",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kasepuhan Cirompang <br><b>Desa </b> Cirompang, <b>Kec. </b> Sobang, <b>Kab. </b> Lebak, <b>Prov. </b> Banten <br><b>Status: </b> Sudah mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -6.682043,
+            "longitude": 106.314171
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ffcc00",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kasepuhan Pasir Eurih <br><b>Desa </b> Pasireurih, <b>Kec. </b> Muncang, <b>Kab. </b> Lebak, <b>Prov. </b> Banten <br><b>Status: </b> Sudah mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -6.602002,
+            "longitude": 106.271122
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Pagu <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Malifut, <b>Kab. </b> Halmahera Utara, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.173662,
+            "longitude": 127.813871
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Modole <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Kao, <b>Kab. </b> Halmahera Utara, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.256874,
+            "longitude": 127.939562
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Gura <br><b>Desa </b> Gura, <b>Kec. </b> Tobelo, <b>Kab. </b> Halmahera Utara, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.73939,
+            "longitude": 128.006423
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Boeng <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Kao, <b>Kab. </b> Halmahera Utara, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.356874,
+            "longitude": 127.856314
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Lina <br><b>Desa </b> Telaga Lina, <b>Kec. </b> Tobelo, <b>Kab. </b> Halmahera Utara, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.678291,
+            "longitude": 127.898749
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Huboto <br><b>Desa </b> Huboto, <b>Kec. </b> Tobelo, <b>Kab. </b> Halmahera Utara, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.711758,
+            "longitude": 127.948976
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Mumulati <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Tobelo, <b>Kab. </b> Halmahera Utara, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.720841,
+            "longitude": 127.959023
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Morodina <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Tidak tersedia, <b>Kab. </b> Halmahera Utara, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.720841,
+            "longitude": 127.959023
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Morodai <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Tidak tersedia, <b>Kab. </b> Halmahera Utara, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.720841,
+            "longitude": 127.959023
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Waleino <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Tidak tersedia, <b>Kab. </b> Halmahera Utara, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.720841,
+            "longitude": 127.959023
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Towiliko <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Tidak tersedia, <b>Kab. </b> Halmahera Utara, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.720841,
+            "longitude": 127.959023
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Banemo <br><b>Desa </b> Banemo, <b>Kec. </b> Patani Barat, <b>Kab. </b> Halmahera Tengah, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.336698,
+            "longitude": 128.625297
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Fritu <br><b>Desa </b> Fritu, <b>Kec. </b> Weda Utara, <b>Kab. </b> Halmahera Tengah, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.587854,
+            "longitude": 128.21048
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kobe <br><b>Desa </b> Kobe, <b>Kec. </b> Weda Tengah, <b>Kab. </b> Halmahera Tengah, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.413148,
+            "longitude": 127.888598
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Peniti <br><b>Desa </b> Peniti, <b>Kec. </b> Patani Utara, <b>Kab. </b> Halmahera Tengah, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.413535,
+            "longitude": 128.664067
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Dodaga <br><b>Desa </b> Dodaga, <b>Kec. </b> Wasile Timur, <b>Kab. </b> Halmahera Timur, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.167158,
+            "longitude": 128.198346
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Gane Dalam <br><b>Desa </b> Gane Dalam, <b>Kec. </b> Gane Barat Selatan, <b>Kab. </b> Halmahera Selatan, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.768107,
+            "longitude": 128.251545
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Gane Luar <br><b>Desa </b> Gane Luar, <b>Kec. </b> Gane Timur Selatan, <b>Kab. </b> Halmahera Selatan, <b>Prov. </b> Maluku Utara <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.881992,
+            "longitude": 128.421977
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ffcc00",
+            "title": "<b>Masyarakat Hutan Adat: </b> Muluy <br><b>Desa </b> Swan Slutung, <b>Kec. </b> Muara Komam, <b>Kab. </b> Paser, <b>Prov. </b> Kalimantan Timur <br><b>Status: </b> Sudah mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.360468,
+            "longitude": 115.952283
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ff6600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Sayo <br><b>Desa </b> Long sayo, <b>Kec. </b> Muara Komam, <b>Kab. </b> Paser, <b>Prov. </b> Kalimantan Timur <br><b>Status: </b> Proses identifikasi dan verifikasi oleh MHA <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.423594,
+            "longitude": 115.969084
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#ff6600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Lusan <br><b>Desa </b> Lusan, <b>Kec. </b> Muara Komam, <b>Kab. </b> Paser, <b>Prov. </b> Kalimantan Timur <br><b>Status: </b> Proses identifikasi dan verifikasi oleh MHA <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.335124,
+            "longitude": 115.783047
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kelurahan Sepan <br><b>Desa </b> Sepan, <b>Kec. </b> Penajam, <b>Kab. </b> Penajam Paser Utara, <b>Prov. </b> Kalimantan Timur <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.185104,
+            "longitude": 116.651358
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Benuaq Simpang Raya <br><b>Desa </b> Simpang Raya, <b>Kec. </b> Barong Tongkok, <b>Kab. </b> Kutai Barat, <b>Prov. </b> Kalimantan Timur <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.253421,
+            "longitude": 115.70673
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Benuaq Muara Begai <br><b>Desa </b> Muara Begai, <b>Kec. </b> Muara Lawa, <b>Kab. </b> Kutai Barat, <b>Prov. </b> Kalimantan Timur <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.613749,
+            "longitude": 115.797056
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Basap <br><b>Desa </b> Segading dan Desa Bajang, <b>Kec. </b> Bengalon, Sangkulirang, <b>Kab. </b> Kutai Timur, <b>Prov. </b> Kalimantan Timur <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.959085,
+            "longitude": 117.559757
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Wehea <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Muara Wahau, <b>Kab. </b> Kutai Timur, <b>Prov. </b> Kalimantan Timur <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.504775,
+            "longitude": 116.756658
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Benuaq Panarung <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Tidak tersedia, <b>Kab. </b> Mahakam Hulu, <b>Prov. </b> Kalimantan Timur <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.893651,
+            "longitude": 115.30578
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Benuaq Dingin <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Tidak tersedia, <b>Kab. </b> Mahakam Hulu, <b>Prov. </b> Kalimantan Timur <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.010426,
+            "longitude": 114.957313
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Benuaq Umaq Wak <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Long Bagun Ulu, <b>Kab. </b> Mahakam Hulu, <b>Prov. </b> Kalimantan Timur <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.641651,
+            "longitude": 115.06951
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Belaban Ella <br><b>Desa </b> Belaban Ella, <b>Kec. </b> Manukung, <b>Kab. </b> Melawi, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.645518,
+            "longitude": 112.371787
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Landau Leban <br><b>Desa </b> Landau Leban, <b>Kec. </b> Manukung, <b>Kab. </b> Melawi, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.398751,
+            "longitude": 112.335224
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Iban Kulan <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Embaloh, <b>Kab. </b> Kapuas Hulu, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.894229,
+            "longitude": 112.606393
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Iban Tebelan <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Embaloh, <b>Kab. </b> Kapuas Hulu, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.899045,
+            "longitude": 112.624436
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Iban Apan <br><b>Desa </b> Langan, <b>Kec. </b> Embaloh, <b>Kab. </b> Kapuas Hulu, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.186051,
+            "longitude": 112.496416
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Iban Ungak <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Embaloh, <b>Kab. </b> Kapuas Hulu, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.370478,
+            "longitude": 112.329879
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Iban Laok Rugun <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Embaloh, <b>Kab. </b> Kapuas Hulu, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.876972,
+            "longitude": 112.597533
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Manua Sungai Utik <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Embaloh, <b>Kab. </b> Kapuas Hulu, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.892787,
+            "longitude": 112.616113
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Nanga Mentibar <br><b>Desa </b> Buluh Merindu, <b>Kec. </b> Kayan Hulu, <b>Kab. </b> Sintang, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.01292,
+            "longitude": 112.097355
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Melahui <br><b>Desa </b> Sungai Garong, <b>Kec. </b> Kayan Hilir, <b>Kab. </b> Sintang, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.157162,
+            "longitude": 111.979267
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Mali <br><b>Desa </b> Temiang Mali, <b>Kec. </b> Balai, <b>Kab. </b> Sanggau, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.198223,
+            "longitude": 110.06988
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Golik <br><b>Desa </b> Mawang Muda, <b>Kec. </b> Beduwai, <b>Kab. </b> Sanggau, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.808743,
+            "longitude": 110.22046
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Sami <br><b>Desa </b> Sami, <b>Kec. </b> Bonti, <b>Kab. </b> Sanggau, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.400107,
+            "longitude": 110.61005
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Sisang dan Busomu <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Sekayam, <b>Kab. </b> Sanggau, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.79061,
+            "longitude": 110.47872
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kanayatn Senakin <br><b>Desa </b> Senakin, <b>Kec. </b> Sengah Temila, <b>Kab. </b> Landak, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.378132,
+            "longitude": 109.583979
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kanayatn Andeng <br><b>Desa </b> Andeng, <b>Kec. </b> Sengah Temila, <b>Kab. </b> Landak, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.388202,
+            "longitude": 109.554882
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kanayatn Aur Sampok <br><b>Desa </b> Aur Sampuk, <b>Kec. </b> Sengah Temila, <b>Kab. </b> Landak, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.349016,
+            "longitude": 109.592254
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kanayatn Paloan <br><b>Desa </b> Paloan, <b>Kec. </b> Sengah Temila, <b>Kab. </b> Landak, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 0.350713,
+            "longitude": 109.618926
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Dayak Komam Cenayan <br><b>Desa </b> Cenayan, <b>Kec. </b> Nanga Mahap, <b>Kab. </b> Sekadau, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.373999,
+            "longitude": 110.595032
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Dayak Komam Sebabas <br><b>Desa </b> Sebabas, <b>Kec. </b> Nanga Mahap, <b>Kab. </b> Sekadau, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.433266,
+            "longitude": 110.843978
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Dayak Komam Landau Apin <br><b>Desa </b> Landau Apin, <b>Kec. </b> Nanga Mahap, <b>Kab. </b> Sekadau, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.524837,
+            "longitude": 110.634053
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Dayak Komam Meragun <br><b>Desa </b> Meragun, <b>Kec. </b> Nanga Taman, <b>Kab. </b> Sekadau, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.374858,
+            "longitude": 110.998801
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Dayak Komam Rawak Hulu <br><b>Desa </b> Rawak Hulu, <b>Kec. </b> Sekadau Hulu, <b>Kab. </b> Sekadau, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.125036,
+            "longitude": 110.844529
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Dayak Komam Rawak Hilir <br><b>Desa </b> Rawak Hilir, <b>Kec. </b> Sekadau Hulu, <b>Kab. </b> Sekadau, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.107248,
+            "longitude": 110.89434
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Dayak Komam Mondi <br><b>Desa </b> Mondi, <b>Kec. </b> Sekadau Hulu, <b>Kab. </b> Sekadau, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.190149,
+            "longitude": 110.928805
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Dayak Komam Sungai Sambang <br><b>Desa </b> Sungai Sambang, <b>Kec. </b> Sekadau Hulu, <b>Kab. </b> Sekadau, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.148726,
+            "longitude": 110.949351
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Jalai Setipayan <br><b>Desa </b> Penyarang Setipayan, <b>Kec. </b> Jelai Hulu, <b>Kab. </b> Ketapang, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.019957,
+            "longitude": 110.9186
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Jalai Tanggerang <br><b>Desa </b> Tanggerang, <b>Kec. </b> Jelai Hulu, <b>Kab. </b> Ketapang, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.012326,
+            "longitude": 110.666381
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Batu Monang <br><b>Desa </b> Batu Menang, <b>Kec. </b> Jelai Hulu, <b>Kab. </b> Ketapang, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.754944,
+            "longitude": 110.922135
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kendawangan Batu Payung <br><b>Desa </b> Batu Payung, <b>Kec. </b> Marau, <b>Kab. </b> Ketapang, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.02694,
+            "longitude": 110.598833
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kendawangan Bantan Sari <br><b>Desa </b> Bantan Sari, <b>Kec. </b> Marau, <b>Kab. </b> Ketapang, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -2.202093,
+            "longitude": 110.875208
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Simpakng Semandang Kiri <br><b>Desa </b> Semandang Kiri, <b>Kec. </b> Simpang Hulu, <b>Kab. </b> Ketapang, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.61889,
+            "longitude": 110.390307
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Simpakng Botuh Bosi <br><b>Desa </b> Botuh Bosi, <b>Kec. </b> Simpang Hulu, <b>Kab. </b> Ketapang, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.655552,
+            "longitude": 109.959225
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Simpang Kualan Hilir <br><b>Desa </b> Kualan Hilir, <b>Kec. </b> Simpang Hulu, <b>Kab. </b> Ketapang, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.681133,
+            "longitude": 110.126648
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Krio <br><b>Desa </b> Krio Hulu, <b>Kec. </b> Hulu Sungai, <b>Kab. </b> Ketapang, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -1.006242,
+            "longitude": 110.973384
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Kenyabur <br><b>Desa </b> Kenyabur, <b>Kec. </b> Hulu Sungai, <b>Kab. </b> Ketapang, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": -0.537699,
+            "longitude": 111.044899
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#996600",
+            "title": "<b>Masyarakat Hutan Adat: </b> Salako <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Sajingan dan Lundu, <b>Kab. </b> Sambas, <b>Prov. </b> Kalimantan Barat <br><b>Status: </b> Penyusunan Perda/SK <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 1.747009,
+            "longitude": 109.568106
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Lundayeh <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Tidak tersedia, <b>Kab. </b> Nunukan, <b>Prov. </b> Kalimantan Utara <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 4.174344,
+            "longitude": 116.604618
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Punan Long Adiu <br><b>Desa </b> Long Adiu, <b>Kec. </b> Malinau Selatan, <b>Kab. </b> Malinau, <b>Prov. </b> Kalimantan Utara <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 3.356789,
+            "longitude": 116.441456
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Punan Setarap <br><b>Desa </b> Setarap, <b>Kec. </b> Malinau Selatan, <b>Kab. </b> Malinau, <b>Prov. </b> Kalimantan Utara <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 3.369372,
+            "longitude": 116.406964
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Tubu <br><b>Desa </b> Sungai Tubu, <b>Kec. </b> Sungai Tubu, <b>Kab. </b> Malinau, <b>Prov. </b> Kalimantan Utara <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 3.24911,
+            "longitude": 116.064448
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Pujungan <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Pujungan, <b>Kab. </b> Malinau, <b>Prov. </b> Kalimantan Utara <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 2.759111,
+            "longitude": 115.289049
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Pakinayeh <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Bahau Hulu, <b>Kab. </b> Malinau, <b>Prov. </b> Kalimantan Utara <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 3.363193,
+            "longitude": 115.852021
+          },
+          {
+            "svgPath": targetSVG,
+            "zoomLevel": 3.9,
+            "scale": 0.5,
+            "color": "#339933",
+            "title": "<b>Masyarakat Hutan Adat: </b> Bahau Hulu <br><b>Desa </b> Tidak tersedia, <b>Kec. </b> Bahau Hulu, <b>Kab. </b> Malinau, <b>Prov. </b> Kalimantan Utara <br><b>Status: </b> Masyarakat perlu mengajukan permohonan hutan adat <br><b>Luas areal (ha):</b> Tidak tersedia <br><b>Tahun penetapan/proses: </b> 2018",
+            "latitude": 3.327624,
+            "longitude": 115.618342
+          }
+        ]
+  },
+  "export": {
+    "enabled": true
+  }
+} );
+</script>
+
+<!-- HTML -->
+<center>
+<h3>Peta masyarakat hutan adat, 2017-2018</h3>
+</center>
+<div id="chartdiv"></div>
+<h5>Sumber: HuMa dan Kementerian Lingkungan Hidup dan Kehutanan, 2018</h5>
+</html>
